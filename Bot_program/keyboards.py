@@ -1,4 +1,4 @@
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, KeyboardButton, ReplyKeyboardMarkup
 
 # Buttons
 CountrySngButton = InlineKeyboardButton(
@@ -16,22 +16,22 @@ CountryOtherButton = InlineKeyboardButton(
     callback_data='Другое'
 )
 
-SharedButton = InlineKeyboardButton(
+SharedButton = KeyboardButton(
     text='да, уже поделился',
 )
 
-SharingButton = InlineKeyboardButton(
+SharingButton = KeyboardButton(
     text='еще нет, уже бегу',
 )
 
-WillShareButton = InlineKeyboardButton(
+WillShareButton = KeyboardButton(
     text='еще не дочитал, но в течении дня поделюсь',
 )
 
 ShareText = "Уже рассказал своему наставнику, что тебе больше всего понравилось в этом эфире?"
 
-ShareKeyboard = InlineKeyboardMarkup(
-    inline_keyboard=[
+ShareKeyboard = ReplyKeyboardMarkup(
+    keyboard=[
         [SharedButton, SharingButton, WillShareButton]
     ]
 )

@@ -9,6 +9,7 @@ pip-delete-this-directory.txt
 
 
 *.log
+*.log.*
 *.env
 .venv
 env/
@@ -26,3 +27,5 @@ venv.bak/
 .fleet/
 
 /temp/
+
+Bot_program/credentials.json

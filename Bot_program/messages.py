@@ -62,7 +62,7 @@ async def message_day1(user_id: int):
     await bot.send_photo(chat_id=user_id, photo=day1.photo1, caption="Пей Лимон - получишь миллион")
     await bot.send_photo(chat_id=user_id, photo=day1.photo2)
     await asyncio.sleep(QUESTION_AWAIT)
-    await bot.send_message(text=ShareText, reply_markup=ShareKeyboard)
+    await bot.send_message(chat_id=user_id, text=ShareText, reply_markup=ShareKeyboard)
 
 
 async def message_day2(user_id: int):
@@ -79,7 +79,7 @@ async def message_day2(user_id: int):
     await bot.send_photo(chat_id=user_id, photo=day2.photo1)
     await bot.send_photo(chat_id=user_id, photo=day2.photo2)
     await asyncio.sleep(QUESTION_AWAIT)
-    await bot.send_message(text=ShareText, reply_markup=ShareKeyboard)
+    await bot.send_message(chat_id=user_id, text=ShareText, reply_markup=ShareKeyboard)
 
 async def message_day3(user_id: int):
     await bot.send_message(chat_id=user_id, text=day3.greeting)
@@ -94,7 +94,7 @@ async def message_day3(user_id: int):
     await bot.send_photo(chat_id=user_id, photo=day3.photo1)
     await bot.send_photo(chat_id=user_id, photo=day3.photo2)
     await asyncio.sleep(QUESTION_AWAIT)
-    await bot.send_message(text=ShareText, reply_markup=ShareKeyboard)
+    await bot.send_message(chat_id=user_id, text=ShareText, reply_markup=ShareKeyboard)
 
 async def message_day4(user_id: int):
     await bot.send_message(chat_id=user_id, text=day4.greeting)
@@ -108,7 +108,7 @@ async def message_day4(user_id: int):
     await bot.send_photo(chat_id=user_id, photo=day4.photo1)
     await bot.send_photo(chat_id=user_id, photo=day4.photo2)
     await asyncio.sleep(QUESTION_AWAIT)
-    await bot.send_message(text=ShareText, reply_markup=ShareKeyboard)
+    await bot.send_message(chat_id=user_id, text=ShareText, reply_markup=ShareKeyboard)
 
 async def message_day5(user_id: int):
     await bot.send_message(chat_id=user_id, text=day5.greeting)
@@ -130,7 +130,7 @@ async def message_day5(user_id: int):
     await bot.send_photo(chat_id=user_id, photo=day5.photo3)
     await bot.send_photo(chat_id=user_id, photo=day5.photo4)
     await asyncio.sleep(QUESTION_AWAIT)
-    await bot.send_message(text=ShareText, reply_markup=ShareKeyboard)
+    await bot.send_message(chat_id=user_id, text=ShareText, reply_markup=ShareKeyboard)
 
 async def message_day6(user_id: int):
     await bot.send_message(chat_id=user_id, text=day6.greeting)
@@ -146,7 +146,7 @@ async def message_day6(user_id: int):
     await bot.send_photo(chat_id=user_id, photo=day6.photo3)
     await bot.send_photo(chat_id=user_id, photo=day6.photo4)
     await asyncio.sleep(QUESTION_AWAIT)
-    await bot.send_message(text=ShareText, reply_markup=ShareKeyboard)
+    await bot.send_message(chat_id=user_id, text=ShareText, reply_markup=ShareKeyboard)
 
 async def message_day7(user_id: int):
     await bot.send_message(chat_id=user_id, text=day7.greeting)
@@ -160,7 +160,7 @@ async def message_day7(user_id: int):
     await bot.send_photo(chat_id=user_id, photo=day7.photo2)
     await bot.send_photo(chat_id=user_id, photo=day7.photo3)
     await asyncio.sleep(QUESTION_AWAIT)
-    await bot.send_message(text=ShareText, reply_markup=ShareKeyboard)
+    await bot.send_message(chat_id=user_id, text=ShareText, reply_markup=ShareKeyboard)
 
 async def message_day8(user_id: int):
     await bot.send_message(chat_id=user_id, text=day8.greeting)
@@ -172,20 +172,20 @@ async def message_day8(user_id: int):
     await bot.send_photo(chat_id=user_id, photo=day8.photo1)
     await bot.send_photo(chat_id=user_id, photo=day8.photo2)
     await asyncio.sleep(QUESTION_AWAIT)
-    await bot.send_message(text=ShareText, reply_markup=ShareKeyboard)
+    await bot.send_message(chat_id=user_id, text=ShareText, reply_markup=ShareKeyboard)
 
 async def message_day9(user_id: int):
     await bot.send_message(chat_id=user_id, text=day9.greeting)
     await asyncio.sleep(VIDEO_AWAIT)
     await bot.send_video(chat_id=user_id, video=day9.video1, caption="Deep Blue\n9 день")
     await asyncio.sleep(TEXT_AWAIT)
-    await bot.send_message(chat_id=user_id, text=day9.text1)
+    await bot.send_message(chat_id=user_id, text=day9.text1, parse_mode='MarkdownV2')
     await asyncio.sleep(PHOTO_AWAIT)
     await bot.send_photo(chat_id=user_id, photo=day9.photo1, caption=day9.caption1, parse_mode='MarkdownV2')
     await bot.send_photo(chat_id=user_id, photo=day9.photo2)
     await bot.send_photo(chat_id=user_id, photo=day9.photo3)
     await asyncio.sleep(QUESTION_AWAIT)
-    await bot.send_message(text=ShareText, reply_markup=ShareKeyboard)
+    await bot.send_message(chat_id=user_id, text=ShareText, reply_markup=ShareKeyboard)
 
 async def message_day10(user_id: int):
     await bot.send_message(chat_id=user_id, text=day10.greeting)
@@ -198,7 +198,7 @@ async def message_day10(user_id: int):
     await bot.send_photo(chat_id=user_id, photo=day10.photo1)
     await bot.send_photo(chat_id=user_id, photo=day10.photo2)
     await asyncio.sleep(QUESTION_AWAIT)
-    await bot.send_message(text=ShareText, reply_markup=ShareKeyboard)
+    await bot.send_message(chat_id=user_id, text=ShareText, reply_markup=ShareKeyboard)
 
 
 daily_messages = [message_day1, message_day2, message_day3, message_day4, message_day5,

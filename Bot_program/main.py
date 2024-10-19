@@ -10,7 +10,7 @@ from logging.handlers import TimedRotatingFileHandler
 from logging import Formatter
 
 # create handler
-handler = TimedRotatingFileHandler(filename='runtime.log', when='D', interval=1, backupCount=90, encoding='utf-8', delay=False)
+handler = TimedRotatingFileHandler(filename='runtime.log', when='D', interval=1, backupCount=50, encoding='utf-8', delay=False)
 
 # create formatter and add to handler
 formatter = Formatter(fmt='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -30,7 +30,7 @@ jobstores = {
 
 scheduler = AsyncIOScheduler(jobstores=jobstores)
 
-BOT_TOKEN = ''
+BOT_TOKEN = '6824149110:AAElElsqHbVoX2xnZnrWqeyFRqR3TxyhbVw'
 bot = Bot(token=BOT_TOKEN)
 
 async def main():

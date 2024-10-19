@@ -2,7 +2,7 @@ from aiogram import Dispatcher, F
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import default_state, State, StatesGroup
 from aiogram.fsm.storage.redis import RedisStorage, Redis
-from aiogram.types import Message, CallbackQuery
+from aiogram.types import Message, CallbackQuery, ReplyKeyboardRemove
 from aiogram.filters import CommandStart, StateFilter, Command
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from scheduler import schedule_messages_for_10_days
@@ -143,4 +143,11 @@ async def process_time_sent(message: Message, state: FSMContext, apscheduler: As
 async def warning_not_time(message: Message):
     await message.answer(
         text=texts.incorrect_time
+    )
+
+@dp.message(F.text.in_(['еще нет, уже бегу', 'еще не дочитал, но в течении дня поделюсь', 'да, уже поделился']))
+async def process_asking(message: Message):
+    await message.answer(
+        text="Отлично!",
+        reply_markup=ReplyKeyboardRemove()
     )
